@@ -1,0 +1,51 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+<div>
+    <div id="csrf">
+        {% csrf_token %}
+    </div>
+    <div>
+        <label for="first">First number</label>
+        <input id="first" name="first" type="text" required>
+    </div>
+    <div>
+        <label for="second">Second Number</label>
+        <input id="second" name="second" type="text" required>
+    </div>
+
+
+        <input class="btnOper" type="button" data-oper="add" value="add">
+        <input class="btnOper" type="button" data-oper="substract" value="substract">
+        <input class="btnOper" type="button" data-oper="multiply" value="multiply">
+        <input class="btnOper" type="button" data-oper="divide" value="divide">
+
+
+    <h3  id="response"></h3>
+    <h3 id="operErrors"></h3>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+
+<script type="text/javascript" src="{% static 'js/calculate.js' %}"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+
+
+</body>
+</html>
