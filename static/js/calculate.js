@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
                 $('#response').text(data['response']).css("background-color", "#00CC00");
             }
         ).fail( function () {
-        $('#operErrors').text("Only Numbers please").css("background-color", "#FF0000");
+        $('#operErrors').text("Try only numbers please").css("background-color", "#FF0000");
             },
         )
     });
